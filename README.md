@@ -1,9 +1,8 @@
 # CloudFormation-mini-project
-# AWS CloudFormation EC2 Deployment
 
 This project automates the deployment of an EC2 instance in a specific Virtual Private Cloud (VPC) using AWS CloudFormation. The CloudFormation template includes user data, allowing for custom configuration during the instance launch.
 
-## Prerequisites
+## Prerequisites if you which to use the CLI(Command Line Interphase)
 
 Before deploying the EC2 instance using CloudFormation, ensure you have the following:
 
@@ -15,23 +14,23 @@ Before deploying the EC2 instance using CloudFormation, ensure you have the foll
 1. Clone this repository to your local machine:
 
     ```bash
-    git clone https://github.com/your-username/cloudformation-ec2-deployment.git
+    git clone https://github.com/eugenie84/CloudFormation-mini-project.git
     ```
 
 2. Navigate to the project directory:
 
     ```bash
-    cd cloudformation-ec2-deployment
+    cd Sample-EC2.yml
     ```
 
-3. Update the `ec2-deployment.yaml` CloudFormation template with your desired parameters, such as VPC ID, subnet ID, instance type, key pair, etc.
+3. Update the `Sample-EC2.yml` CloudFormation template with your desired parameters, such as VPC ID, subnet ID, instance type, key pair, etc.
 
 4. Deploy the CloudFormation stack using the AWS CLI:
 
     ```bash
     aws cloudformation create-stack \
         --stack-name ec2-deployment-stack \
-        --template-body file://ec2-deployment.yaml \
+        --template-body file://Sample-EC2.yml \
         --parameters ParameterKey=VpcId,ParameterValue=your-vpc-id \
                      ParameterKey=SubnetId,ParameterValue=your-subnet-id \
                      ParameterKey=InstanceType,ParameterValue=t2.micro \
@@ -49,7 +48,7 @@ Before deploying the EC2 instance using CloudFormation, ensure you have the foll
 
 ## Customization
 
-For additional custom configurations during instance launch, update the `user-data.sh` script within the CloudFormation template (`ec2-deployment.yaml`).
+For additional custom configurations during instance launch, update the `user-data.sh` script within the CloudFormation template (`Sample-EC2.yml`).
 
 ## Cleanup
 
