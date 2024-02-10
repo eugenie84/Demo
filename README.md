@@ -1,4 +1,4 @@
-# CloudFormation-mini-project
+# Demo
 
 This project automates the deployment of an EC2 instance in a specific Virtual Private Cloud (VPC) using AWS CloudFormation. The CloudFormation template includes user data, allowing for custom configuration during the instance launch.
 
